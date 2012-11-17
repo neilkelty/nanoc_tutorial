@@ -11,6 +11,11 @@
   <body>
     <div id="main">
       <%= yield %>
+
+      <% if @item[:author] %>
+        <p>This page was written by <%= @item[:author] %></p>
+      <% end %>
+      
     </div>
     <div id="sidebar">
       <h2>Documentation</h2>
